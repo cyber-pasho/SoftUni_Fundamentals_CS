@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Problem5
 {
-    internal class Problem5
+    internal class Problem6
     {
         static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace Problem5
             }
             else if (monthNumber == "Spain" || monthNumber == "Argentina" || monthNumber == "Mexico")
             {
-                    Console.WriteLine("Spanish");
+                Console.WriteLine("Spanish");
             }
             else
             {
