@@ -8,7 +8,7 @@ namespace basicSyntaxLecture
 {
     internal class Problem1
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             string name = Console.ReadLine();
             int age = int.Parse(Console.ReadLine());
