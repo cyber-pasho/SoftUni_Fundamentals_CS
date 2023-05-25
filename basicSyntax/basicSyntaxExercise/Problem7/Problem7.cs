@@ -54,7 +54,6 @@ namespace Problem7
             string product = Console.ReadLine();
             while (product != "End")
             {
-                //fix final sum [START]
                 double productDouble = 0;
                 bool invalidProduct = false;
                 if (product == "Nuts")
@@ -82,7 +81,6 @@ namespace Problem7
                     Console.WriteLine("Invalid product");
                     invalidProduct = true;
                 }
-                //fix final sum [END]
                 if (!invalidProduct)
                 {
                     sum -= productDouble;
