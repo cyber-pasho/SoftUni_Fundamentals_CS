@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem7
+namespace Problem8
 {
-    internal class Problem7
+    internal class Problem8
     {
         static void Main(string[] args)
         {
