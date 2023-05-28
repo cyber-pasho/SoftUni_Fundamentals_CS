@@ -10,6 +10,7 @@ namespace arraysLecture
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
