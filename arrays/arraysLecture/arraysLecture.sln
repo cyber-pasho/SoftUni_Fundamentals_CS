@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arraysLecture", "arraysLecture.csproj", "{149B57CA-070A-4263-8C5F-89B002F01809}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem1", "Problem1\Problem1.csproj", "{149B57CA-070A-4263-8C5F-89B002F01809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
