@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Problem8
 {
-    internal class Program
+    internal class Peoblem8
     {
         static int[] StringToIntArray()
         {
