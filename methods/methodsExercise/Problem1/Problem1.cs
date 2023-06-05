@@ -8,8 +8,28 @@ namespace methodsExercise
 {
     internal class Problem1
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            PrintSmallest();
+        }
+        static void PrintSmallest()
+        {
+            int smallest = int.MaxValue;
+            for (int i = 1; i <= 3; i++)
+            {
+                int num = int.Parse(Console.ReadLine());
+                if (num < smallest)
+                {
+                    smallest = num;
+                }
+                else
+                {
+                    continue;
+                }
+
+            }
+            Console.WriteLine(smallest);
         }
     }
 }
+  
