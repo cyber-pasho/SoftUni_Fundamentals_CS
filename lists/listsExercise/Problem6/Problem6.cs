@@ -23,17 +23,14 @@ namespace Problem6
                 .ToList();
             int card1 = 0;
             int card2 = 0;
-            //
             for (int i = 0; i < cards1.Count; i = 0)
             {
                 card1 = cards1[0];
-                //
                 for (int j = 0; j < cards2.Count; j = 0)
                 {
                     card2 = cards2[0];
                     break;
                 }
-                //
                 if (card1 > card2)
                 {
                     cards1.Add(card2);
@@ -71,7 +68,6 @@ namespace Problem6
                         break;
                     }
                 }
-
 
             }
             
