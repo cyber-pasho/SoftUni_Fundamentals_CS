@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{047C9FD8-0BEC-4FB8-8588-3DD6604FA10E}</ProjectGuid>
+    <ProjectGuid>{9457B29E-8200-4268-8BC1-865BBBB429E0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Problem7</RootNamespace>
-    <AssemblyName>Problem7</AssemblyName>
+    <RootNamespace>Problem1</RootNamespace>
+    <AssemblyName>Problem1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Problem7.cs" />
+    <Compile Include="Problem1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

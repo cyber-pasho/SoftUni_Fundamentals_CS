@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Problem7
 {
-    internal class Program
+    internal class Problem7
     {
         static void Main(string[] args)
         {
@@ -26,16 +26,3 @@ namespace Problem7
         }
     }
 }
-
-
-//List<string> output = new List<string>();
-//for (int i = 0; i < input.Count; i++)
-//{
-    //List<string> inputEach = input[i]
-        //.Split()
-        //.ToList();
-    //for (int j = 0; j < inputEach.Count; j++)
-    //{
-        //output.Add(inputEach[j]);
-   //}
-//}
