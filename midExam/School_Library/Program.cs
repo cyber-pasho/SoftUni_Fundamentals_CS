@@ -12,15 +12,12 @@ namespace School_Library
         {
             string shelf = Console.ReadLine();
             List<string> books = shelf
-                .Split(new string[] { "&" }, StringSplitOptions.RemoveEmptyEntries)
+                .Split('&')
                 .ToList();
             bool isBookPresent = false;
             bool isBookPresent1 = false;
             int index1 = 0;
             int index2 = 0;
-            //
-            for (int i = 0; i <= books.Count-1; i++)
-            {
                 List<string> command = Console.ReadLine()
                 .Split(new string[] { " | " }, StringSplitOptions.RemoveEmptyEntries)
                 .ToList();
@@ -89,8 +86,6 @@ namespace School_Library
                             .Split(new string[] { " | " }, StringSplitOptions.RemoveEmptyEntries)
                             .ToList();
                 }
-                break;
-            }
             Console.WriteLine(string.Join(", ", books));
         }
     }
