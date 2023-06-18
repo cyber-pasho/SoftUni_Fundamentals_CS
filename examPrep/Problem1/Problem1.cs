@@ -20,6 +20,11 @@ namespace Problem1
             {
                 if (input == "special" || input == "regular")
                 {
+                    if (totalPrice==0)
+                    {
+                        Console.WriteLine($"Invalid order!");
+                        return;
+                    }
                     break;
                 }
                 else
