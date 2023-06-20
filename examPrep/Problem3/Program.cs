@@ -18,7 +18,6 @@ namespace Problem3
                 .Split(' ')
                 .ToList();
             int currentHouse = 0;
-            int houseCount = 0;
             //
             while (input[0] != "Love!")
             {
@@ -26,15 +25,11 @@ namespace Problem3
                 currentHouse += jump;
                 if (currentHouse >= hood.Count)
                 {
-                    while (currentHouse >= hood.Count)
-                    {
-                        int remainingJumps = currentHouse - (hood.Count - 1);
-                        currentHouse = remainingJumps;
-                    }
+                    currentHouse = 0;
                 }
                 if (hood[currentHouse] <= 0)
                 {
-                    Console.WriteLine($"Place {hood[currentHouse]} already had Valentine's day.");
+                    Console.WriteLine($"Place {currentHouse} already had Valentine's day.");
                 }
                 else
                 {
@@ -48,10 +43,11 @@ namespace Problem3
                 .Split(' ')
                 .ToList();
             }
+            int houseCount = 0;
             Console.WriteLine($"Cupid's last position was {currentHouse}.");
             foreach (var item in hood)
             {
-                if (item != 0)
+                if (item > 0)
                 {
                     houseCount++;
                 }
