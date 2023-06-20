@@ -29,11 +29,13 @@ namespace Problem2
                     {
                         case "potion":
                             health += int.Parse(room[1]);
+                            int healed = 0;
                             if (health > 100)
                             {
+                                healed = health - 100;
                                 health = 100;
                             }
-                            Console.WriteLine($"You healed for {room[1]} hp.");
+                            Console.WriteLine($"You healed for {int.Parse(room[1])-healed} hp.");
                             Console.WriteLine($"Current health: {health} hp.");
                             counter++;
                             continue;
@@ -64,14 +66,15 @@ namespace Problem2
                             {
                                 break;
                             }
-                    if (isDead == false)
-                    {
-                        Console.WriteLine($"You've made it!");
-                        Console.WriteLine($"Bitcoins: {bitcoins}");
-                        Console.WriteLine($"Health: {health}");
-                    }
-                    
                 }
+                if (isDead == false)
+                {
+                    Console.WriteLine($"You've made it!");
+                    Console.WriteLine($"Bitcoins: {bitcoins}");
+                    Console.WriteLine($"Health: {health}");
+                    break;
+                }
+
             }
         }
     }
