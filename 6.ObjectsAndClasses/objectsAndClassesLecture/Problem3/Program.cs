@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,11 +22,6 @@ namespace Problem3
                 string time = input[2];
                 //
                 var song = new Song(type, name, time);
-                //
-                song.TypeList = type;
-                song.Name = name;
-                song.Time = time;
-                //
                 songs.Add(song);
             }
             string order = Console.ReadLine();
@@ -50,7 +44,7 @@ namespace Problem3
             }
         }
     }
-    class Song
+    public class Song
     {
         public Song(string typeList, string name, string time)
         {

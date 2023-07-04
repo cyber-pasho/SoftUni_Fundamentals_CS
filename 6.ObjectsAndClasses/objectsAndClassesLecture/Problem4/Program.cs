@@ -10,6 +10,7 @@ namespace Problem4
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
