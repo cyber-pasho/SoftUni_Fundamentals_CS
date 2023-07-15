@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem1", "Problem1\Proble
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2", "Problem2\Problem2.csproj", "{EA7BF34F-36EF-4AF2-87EE-A6E5EF8B31B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2+", "Problem3\Problem2+.csproj", "{293E9912-A590-4D19-8B08-8464DE77B5C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem3", "Problem3\Problem3.csproj", "{293E9912-A590-4D19-8B08-8464DE77B5C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem4", "Problem3\Problem4.csproj", "{2367F066-7E5E-47FF-A26A-BAE9D562763D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem4", "Problem4\Problem4.csproj", "{2367F066-7E5E-47FF-A26A-BAE9D562763D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5", "Problem4\Problem5.csproj", "{9ED5FCE9-EDB8-4013-A7DF-EE72B0F7EF8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem5", "Problem5\Problem5.csproj", "{9ED5FCE9-EDB8-4013-A7DF-EE72B0F7EF8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
