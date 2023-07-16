@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Problem4
+namespace Problem5
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int teamsCount = int.Parse(Console.ReadLine());
             List<Team> teams = new List<Team>();
@@ -59,19 +56,25 @@ namespace Problem4
                 string teamName = membersApplication[1];
                 bool teamFalse = false;
                 bool memberClone = false;
-                //Rule 3,4 - to be fixed
+                int falseCounter = 0;
+                //Rule 3,4
                 foreach (var item in teams)
                 {
                     if (item.Member.Count == 0)
                     {
-                        continue;
+                        foreach (var creator in teams)
+                        {
+                            if (creator.Creator == member)
+                            {
+                                Console.WriteLine($"Member {member} cannot join team {teamName}!");
+                                memberClone = true;
+                                teamFalse = false;
+                            }
+                        }
                     }
-                    if (teamName != item.Name)
+                    if (teamName == item.Name)
                     {
-                        teamFalse = true;
-                    }
-                    else
-                    {
+                        teamFalse = false;
                         foreach (var person in item.Member)
                         {
                             if (person == member)
@@ -80,6 +83,15 @@ namespace Problem4
                                 memberClone = true;
                             }
                         }
+                        falseCounter++;
+                    }
+                    else
+                    {
+                        if (falseCounter > 0)
+                        {
+                            continue;
+                        }
+                        teamFalse = true;
                     }
                 }
                 if (teamFalse)
@@ -97,7 +109,7 @@ namespace Problem4
                     .ToArray();
                     continue;
                 }
-                //Rule 3,4 - to be fixed
+                //Rule 3,4
                 foreach (var item in teams)
                 {
                     if (item.Name == teamName)
@@ -109,16 +121,17 @@ namespace Problem4
                     .Split(new string[] { "->" }, StringSplitOptions.None)
                     .ToArray();
             }
-            foreach (var team in teams)
+            for (int i = teams.Count-1; i >= 0; i--)
             {
+                var team = teams[i];
                 if (team.Member.Count == 0)
                 {
-                    teams.Remove(team);
+                    teams.RemoveAt(i);
                     disbandedTeams.Add(team);
                 }
             }
             List<Team> sortedTeams = teams
-                .OrderBy(t => t.Member.Count)
+                .OrderByDescending(t => t.Member.Count)
                 .ThenBy(t => t.Name)
                 .ToList()
                 ;
@@ -139,7 +152,7 @@ namespace Problem4
                     Console.WriteLine($"-- {member}");
                 }
             }
-            Console.WriteLine("Teams to disband");
+            Console.WriteLine("Teams to disband:");
             foreach (var team in sortedDisbanded)
             {
                 Console.WriteLine(team.Name);
