@@ -18,7 +18,7 @@
                 cars.Add(car);
             }
             string statement;
-            while ((statement = Console.ReadLine()) != "End" && !string.IsNullOrWhiteSpace(statement))
+            while ((statement = Console.ReadLine()) != "End")
             {
                 var action = statement
                     .Split(" ")
@@ -48,16 +48,17 @@
         public bool CanTravel(int distance)
         {
             double fuelConsumed = distance * FuelPerKM;
-            if (fuelConsumed >= Fuel)
-            {
-                Console.WriteLine("Insufficient fuel for the drive");
-                return false;
-            }
-            else
+            if (fuelConsumed <= Fuel)
             {
                 Fuel -= fuelConsumed;
                 Distance += distance;
                 return true;
+                
+            }
+            else
+            {
+                Console.WriteLine("Insufficient fuel for the drive");
+                return false;
             }
         }
         public override string ToString()
