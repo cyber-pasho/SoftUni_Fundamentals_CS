@@ -1,4 +1,4 @@
-﻿namespace Problem5
+﻿namespace Problem6
 {
     internal class Program
     {
