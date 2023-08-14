@@ -24,15 +24,21 @@ namespace Problem5
                 }
                 else 
                 {
-                    students.Add(studentName);
+                    foreach (var item in courses)
+                    {
+                        if (item.Key == courseName)
+                        {
+                            item.Value.Add(studentName);
+                        }
+                    }
                 }
             }
             foreach (var item in courses)
             {
-                Console.WriteLine($"{item}: {item.Value.Count}");
+                Console.WriteLine($"{item.Key}: {item.Value.Count}");
                 foreach (var name in item.Value)
                 {
-                    Console.WriteLine($"{}");
+                    Console.WriteLine($"-- {name}");
                 }
             }
         }
