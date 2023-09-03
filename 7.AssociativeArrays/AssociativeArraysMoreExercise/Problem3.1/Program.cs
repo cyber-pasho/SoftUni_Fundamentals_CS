@@ -9,14 +9,13 @@
 
             while ((input = Console.ReadLine()) != "Season end")
             {
-                var statement = input.Split(" ").ToList();
-
-                if (statement.Count < 5)
+                var statement = input
+                    .Split(new string[] { " -> ", " vs " }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+                if (statement.Count < 3)
                 {
-                    string movement = string.Join("", statement);
-                    var action = movement.Split("vs").ToList();
-                    string dueler1 = action[0];
-                    string dueler2 = action[1];
+                    string dueler1 = statement[0];
+                    string dueler2 = statement[1];
 
                     if (players.ContainsKey(dueler1) && players.ContainsKey(dueler2))
                     {
@@ -43,11 +42,9 @@
                 }
                 else
                 {
-                    string movement = string.Join("", statement);
-                    var action = movement.Split("->").ToList();
-                    string playerName = action[0];
-                    string playerPosition = action[1];
-                    int skill = int.Parse(action[2]);
+                    string playerName = statement[0];
+                    string playerPosition = statement[1];
+                    int skill = int.Parse(statement[2]);
 
                     if (!players.ContainsKey(playerName))
                     {
