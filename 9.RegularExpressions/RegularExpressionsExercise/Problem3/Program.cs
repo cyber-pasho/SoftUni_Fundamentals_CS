@@ -19,10 +19,10 @@ namespace Problem3
                     decimal price = decimal.Parse(match.Groups["price"].Value);
                     decimal money = count*price;
                     totalMoney += money;
-                    Console.WriteLine($"{match.Groups["customer"].Value}: {match.Groups["product"].Value} - {money}");
+                    Console.WriteLine($"{match.Groups["customer"].Value}: {match.Groups["product"].Value} - {money:f2}");
                 }
-                Console.WriteLine($"Total income: {totalMoney}");
             }
+            Console.WriteLine($"Total income: {totalMoney:f2}");
         }
     }
     
